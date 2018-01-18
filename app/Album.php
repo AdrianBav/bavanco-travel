@@ -30,4 +30,17 @@ class Album extends Model
     {
         return $this->hasMany('App\Photograph');
     }
+
+
+    // Accessors & Mutators
+
+    /**
+     * Get the albums's thumbnail.
+     *
+     * @return string
+     */
+    public function getThumbnailAttribute()
+    {
+        return asset(sprintf('storage/albums/%s.jpg', $this->slug));
+    }
 }

@@ -22,34 +22,34 @@ class CamerasTableSeeder extends Seeder
         $digitalSlrCamera->cameras()->create([
             'manufacturer'   => 'Canon',
             'model'          => 'EOS Rebel T6S',
-            'photo_ref'      => 'T6S',
             'image'          => 'canon-eos-rebel-t6s.jpg',
+            'ref'            => 'T6S',
         ]);
 
         $analogueCamera->cameras()->createMany([
             [
                 'manufacturer'   => 'Lomography',
                 'model'          => 'Diana Mini',
-                'photo_ref'      => 'Mini',
                 'image'          => 'lomography-diana-mini.jpg',
+                'ref'            => 'Mini',
             ],
             [
                 'manufacturer'   => 'Lomography',
                 'model'          => 'Lomo LC-A+',
-                'photo_ref'      => 'LC-A+',
                 'image'          => 'lomography-lomo-lc-a+.jpg',
+                'ref'            => 'LC-A+',
             ],
             [
                 'manufacturer'   => 'Lomography',
                 'model'          => 'Fisheye One',
-                'photo_ref'      => 'Fish1',
                 'image'          => 'lomography-fisheye-one.jpg',
+                'ref'            => 'Fish1',
             ],
             [
                 'manufacturer'   => 'Lomography',
                 'model'          => 'Sprocket Rocket',
-                'photo_ref'      => 'Rocket',
                 'image'          => 'lomography-sprocket-rocket.jpg',
+                'ref'            => 'Rocket',
             ],
         ]);
 
@@ -57,20 +57,20 @@ class CamerasTableSeeder extends Seeder
             [
                 'manufacturer'   => 'Sony',
                 'model'          => 'DSC-W70',
-                'photo_ref'      => 'W70',
                 'image'          => 'sony-dsc-w70.jpg',
+                'ref'            => 'W70',
             ],
             [
                 'manufacturer'   => 'Sony',
                 'model'          => 'DSC-P8',
-                'photo_ref'      => 'P8',
                 'image'          => 'sony-dsc-p8.jpg',
+                'ref'            => 'P8',
             ],
             [
                 'manufacturer'   => 'Panasonic',
                 'model'          => 'DMC-TZ3',
-                'photo_ref'      => 'TZ3',
                 'image'          => 'panasonic-dmc-tz3.jpg',
+                'ref'            => 'TZ3',
             ],
         ]);
 
@@ -78,20 +78,20 @@ class CamerasTableSeeder extends Seeder
             [
                 'manufacturer'   => 'HTC',
                 'model'          => 'Desire 610',
-                'photo_ref'      => '610',
                 'image'          => 'htc-desire-610.jpg',
+                'ref'            => '610',
             ],
             [
                 'manufacturer'   => 'Samsung',
                 'model'          => 'Galaxy Alpha',
-                'photo_ref'      => 'SM-G850A',
                 'image'          => 'samsung-galaxy-alpha.jpg',
+                'ref'            => 'SM-G850A',
             ],
             [
                 'manufacturer'   => 'Samsung',
                 'model'          => 'Galaxy S7',
-                'photo_ref'      => 'SM-G930VZKA',
                 'image'          => 'samsung-galaxy-s7.jpg',
+                'ref'            => 'SM-G930VZKA',
             ],
         ]);
 
@@ -99,14 +99,14 @@ class CamerasTableSeeder extends Seeder
             [
                 'manufacturer'   => 'GoPro',
                 'model'          => 'HD HERO2',
-                'photo_ref'      => 'HERO2',
                 'image'          => 'gopro-hd-hero2.jpg',
+                'ref'            => 'HERO2',
             ],
             [
                 'manufacturer'   => 'GoPro',
                 'model'          => 'HERO5 Black',
-                'photo_ref'      => 'HERO5',
                 'image'          => 'gopro-hero5-black.jpg',
+                'ref'            => 'HERO5',
             ],
         ]);
     }

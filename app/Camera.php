@@ -38,4 +38,18 @@ class Camera extends Model
     {
         return $this->hasMany('App\Photograph');
     }
+
+
+    // Accessors & Mutators
+
+    /**
+     * Get the camera's thumbnail.
+     *
+     * @param  string  $value
+     * @return string
+     */
+    public function getImageAttribute($value)
+    {
+        return asset(sprintf('storage/cameras/%s', $value));
+    }
 }

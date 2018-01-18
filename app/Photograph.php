@@ -38,4 +38,17 @@ class Photograph extends Model
     {
         return $this->belongsTo('App\Camera');
     }
+
+
+    // Accessors & Mutators
+
+    /**
+     * Get the photographs's file path.
+     *
+     * @return string
+     */
+    public function getPathAttribute()
+    {
+        return asset(sprintf('storage/albums/%s/%s', $this->album->slug, $this->filename));
+    }
 }

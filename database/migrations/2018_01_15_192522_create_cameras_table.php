@@ -18,8 +18,9 @@ class CreateCamerasTable extends Migration
 
             $table->string('manufacturer');
             $table->string('model');
-            $table->string('photo_ref');
             $table->string('image');
+
+            $table->string('ref');
 
             $table->integer('camera_type_id')->unsigned();
         });

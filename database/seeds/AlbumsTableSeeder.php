@@ -15,13 +15,13 @@ class AlbumsTableSeeder extends Seeder
     {
         Album::create([
             'name'        => 'LonJillian (2008 - 2010)',
-            'slug'        => 'lonjillian',
+            'slug'        => 'lonjillian-2008',
             'travel_date' => $this->travelDate($year = 2008, $month = 5),
         ]);
 
         Album::create([
             'name'        => 'Dallister (2008 - 2011)',
-            'slug'        => 'dallister',
+            'slug'        => 'dallister-2008',
             'travel_date' => $this->travelDate($year = 2008, $month = 8),
         ]);
 
