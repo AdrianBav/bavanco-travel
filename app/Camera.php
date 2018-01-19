@@ -43,6 +43,16 @@ class Camera extends Model
     // Accessors & Mutators
 
     /**
+     * Get the camera's full name.
+     *
+     * @return string
+     */
+    public function getFullNameAttribute()
+    {
+        return sprintf('%s %s', $this->manufacturer, $this->model);
+    }
+
+    /**
      * Get the camera's thumbnail.
      *
      * @param  string  $value

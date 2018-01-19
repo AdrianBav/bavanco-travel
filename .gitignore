@@ -13,4 +13,8 @@ yarn-error.log
 .env
 
 # Custom
+/public/mix-manifest.json
+/public/fonts
+/public/css
+/public/js
 scratch.md
