@@ -32,6 +32,19 @@
 			opacity: 1;
 		}
 
+		&:after {
+			background: #ffffff;
+			content: '';
+			display: block;
+			opacity: 1;
+			height: calc(100% + 20px + 20px);
+			width: calc(100% + 15px + 15px);
+			position: absolute;
+			top: -20px;
+			left: -15px;
+			z-index: -999;
+		}
+
 		.closer {
 			@include vendor('transition', 'opacity #{_duration(transition)} ease-in-out');
 			background-image: url('images/close.svg');
@@ -74,23 +87,44 @@
 		}
 
 		.caption {
-			@include padding(2em, 2em);
-			@include vendor('background-image', 'linear-gradient(to top, rgba(16,16,16,0.45) 25%, rgba(16,16,16,0) 100%)');
-			bottom: 0;
-			cursor: default;
-			left: 0;
 			position: absolute;
-			text-align: left;
+			top: 0;
+			left: 0;
+			height: 100%;
 			width: 100%;
+		}
+
+		.caption-camera,
+		.caption-gallery,
+		.caption-photo {
+			position: absolute;
 			z-index: 2;
+			cursor: default;
+			color: #000000;
+			font-size: 12px;
+			font-weight: bold;
+			text-transform: uppercase;
+			text-align: right;
+		}
 
-			h2, h3, h4, h5, h6 {
-				margin: 0 0 (_size(element-margin) * 0.25) 0;
-			}
+		.caption-photo {
+			width: 100%;
+			white-space: nowrap;
+  			overflow: hidden;
+  			text-overflow: ellipsis;
+			bottom: -19px;
+			right: 0;
+		}
 
-			p {
-				color: _palette(fg-bold);
-			}
+		.caption-camera {
+			top: -16px;
+			left: 10px;
+			font-size: 10px;
+		}
+
+		.caption-gallery {
+			top: -19px;
+			right: 10px;
 		}
 
 		.loader {
@@ -150,18 +184,35 @@
 		}
 
 		@include breakpoint(small) {
-			&:before {
-				display: none;
+			&:after {
+				height: calc(100% + 15px + 15px);
+				width: calc(100% + 10px + 10px);
+				top: -15px;
+				left: -10px;
 			}
 
-			.caption {
-				display: none !important;
+			.caption-gallery,
+			.caption-photo {
+				font-size: 11px;
+			}
+
+			.caption-gallery {
+				top: -16px;
+			}
+
+			.caption-photo {
+				bottom: -16px;
+				text-align: center;
 			}
 
 			.closer,
 			.nav-previous,
 			.nav-next {
-				display: none !important;
+				width: 3em;
+			}
+
+			.closer {
+				height: 3em;
 			}
 		}
 	}

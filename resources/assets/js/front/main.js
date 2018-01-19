@@ -219,7 +219,7 @@
 				$main.children('.thumb').each(function() {
 
 					var	$this = $(this),
-						$image = $this.find('.image'), $image_img = $image.children('img'),
+						$image = $this.find('.image').first(), $image_img = $image.children('img'),
 						x;
 
 					// No image? Bail.
@@ -253,46 +253,83 @@
 				});
 
 			// Poptrox.
-				$main.poptrox({
-					baseZIndex: 20000,
-					caption: function($a) {
+			var gallerySettings = {
+			    preload:                    false,          // If true, preload fullsize images in the background
+			    baseZIndex:                 20000,          // Base Z-Index
+			    fadeSpeed:                  300,            // Global fade speed
+			    overlayColor:               '#000000',      // Overlay color
+			    overlayOpacity:             0,              // Overlay opacity
+			    windowMargin:               25,             // Window margin size (in pixels; only comes into play when an image is larger than the viewport)
+			    windowHeightPad:            0,              // Window height pad
+			    selector:                   'a.image',      // Anchor tag selector
+			    caption: 					getCaption,		// Caption settings (see docs)
+			    popupSpeed:                 300,            // Popup (resize) speed
+			    popupWidth:                 200,            // Popup width
+			    popupHeight:                50,             // Popup height
+			    popupIsFixed:               false,          // If true, popup won't resize to fit images
+			    useBodyOverflow:            true,           // If true, the BODY tag is set to overflow: hidden when the popup is visible
+			    usePopupEasyClose:          true,           // If true, popup can be closed by clicking on it anywhere
+			    usePopupForceClose:         true,           // If true, popup can be closed even while content is loading
+			    usePopupLoader:             true,           // If true, show the popup loader
+			    usePopupCloser:             false,          // If true, show the popup closer button/link
+			    usePopupCaption:            true,           // If true, show the popup image caption
+			    usePopupNav:                true ,          // If true, show (and use) popup navigation
+			    usePopupDefaultStyling:     false,          // If true, default popup styling will be applied (background color, text color, etc)
+				    popupBackgroundColor:       '#FFFFFF',      // (Default Style) Popup background color (when usePopupStyling = true)
+				    popupTextColor:             '#000000',      // (Default Style) Popup text color (when usePopupStyling = true)
+				    popupLoaderTextSize:        '2em',          // (Default Style) Popup loader text size
+				    popupCloserBackgroundColor: '#000000',      // (Default Style) Popup closer background color (when usePopupStyling = true)
+				    popupCloserTextColor:       '#FFFFFF',      // (Default Style) Popup closer text color (when usePopupStyling = true)
+				    popupCloserTextSize:        '20px',         // (Default Style) Popup closer text size
+				    popupPadding:               10,             // (Default Style) Popup padding (when usePopupStyling = true)
+				    popupCaptionHeight:         60,             // (Default Style) Popup height of caption area
+				    popupCaptionTextSize:       null,           // (Default Style) Popup caption text size
+				    popupBlankCaptionText:      '(untitled)',   // Applied to images that don't have captions (when captions are enabled)
+				    popupCloserText:            '',       		// Popup closer text
+				    popupLoaderText:            '&bull;&bull;', // Popup loader text
+				    popupClass:                 'poptrox-popup',// Popup class
+				    popupSelector:              null,           // (Advanced) Popup selector (use this if you want to replace the built-in popup)
+				    popupLoaderSelector:        '.loader',      // (Advanced) Popup Loader selector
+				    popupCloserSelector:        '.closer',      // (Advanced) Popup Closer selector
+				    popupCaptionSelector:       '.caption',     // (Advanced) Popup Caption selector
+				    popupNavPreviousSelector:   '.nav-previous',// (Advanced) Popup Nav Previous selector
+				    popupNavNextSelector:       '.nav-next',    // (Advanced) Popup Nav Next selector
+				onPopupClose: 				closeModal,		// Called when popup closes
+				onPopupOpen: 				openModal		// Called when popup opens
+			};
 
-						var s = '';
+				function getCaption($a) {
+					var caption = '';
+					var cameraModel = $a.data('camera');
+					var galleryTitle = $a.siblings('.gallery-title').text();
+					var photoCaption = $a.data('caption');
 
-						$a.nextAll().each(function() {
-							s += this.outerHTML;
-						});
+					caption += '<div class="caption-camera">' + cameraModel + '</div>';
+					caption += '<div class="caption-gallery">' + galleryTitle + '</div>';
+					caption += '<div class="caption-photo">' + photoCaption + '</div>';
 
-						return s;
+					return caption;
+				}
 
-					},
-					fadeSpeed: 300,
-					onPopupClose: function() { $body.removeClass('modal-active'); },
-					onPopupOpen: function() { $body.addClass('modal-active'); },
-					overlayOpacity: 0,
-					popupCloserText: '',
-					popupHeight: 150,
-					popupLoaderText: '',
-					popupSpeed: 300,
-					popupWidth: 150,
-					selector: '.thumb > a.image',
-					usePopupCaption: true,
-					usePopupCloser: true,
-					usePopupDefaultStyling: false,
-					usePopupForceClose: true,
-					usePopupLoader: true,
-					usePopupNav: true,
-					windowMargin: 50
-				});
+				function closeModal(){
+					$body.removeClass('modal-active');
+				}
 
-				// Hack: Set margins to 0 when 'xsmall' activates.
-					skel
-						.on('-xsmall', function() {
-							$main[0]._poptrox.windowMargin = 50;
-						})
-						.on('+xsmall', function() {
-							$main[0]._poptrox.windowMargin = 0;
-						});
+				function openModal(){
+					$body.addClass('modal-active');
+				}
+
+				// Create the galleries
+				$('#cayman-islands-2017').poptrox(gallerySettings);
+				$('#england-2015').poptrox(gallerySettings);
+				$('#us-virgin-islands-2014').poptrox(gallerySettings);
+				$('#washington-dc-2013').poptrox(gallerySettings);
+				$('#arizona-2012').poptrox(gallerySettings);
+				$('#hawaii-2012').poptrox(gallerySettings);
+				$('#spain-2010').poptrox(gallerySettings);
+				$('#san-francisco-2008').poptrox(gallerySettings);
+				$('#dallister-2008').poptrox(gallerySettings);
+				$('#lonjillian-2008').poptrox(gallerySettings);
 
 	});
 
