@@ -6,7 +6,7 @@ use App\Album;
 use App\Camera;
 use App\Http\Controllers\Controller;
 
-class FrontendController extends Controller
+class PagesController extends Controller
 {
     /**
      * Show the application dashboard.
@@ -18,6 +18,6 @@ class FrontendController extends Controller
         $albums = Album::orderBy('travel_date', 'desc')->get();
         $cameras = Camera::all();
 
-        return view('frontend', compact('albums', 'cameras'));
+        return view('front.index', compact('albums', 'cameras'));
     }
 }

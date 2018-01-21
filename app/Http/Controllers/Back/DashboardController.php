@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Back;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class BackendController extends Controller
+class DashboardController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -24,6 +24,6 @@ class BackendController extends Controller
      */
     public function index()
     {
-        return view('backend');
+        return view('back.dashboard');
     }
 }

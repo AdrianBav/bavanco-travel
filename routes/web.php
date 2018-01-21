@@ -12,7 +12,7 @@
 */
 
 Route::namespace('Front')->group(function () {
-    Route::get('/', 'FrontendController@index');
+    Route::get('/', 'PagesController@index');
 });
 
 
@@ -30,5 +30,5 @@ Route::namespace('Front')->group(function () {
 Route::namespace('Back')->group(function () {
     Auth::routes();
 
-    Route::get('/home', 'BackendController@index');
+    Route::get('/dashboard', 'DashboardController@index');
 });
