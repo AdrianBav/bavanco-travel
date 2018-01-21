@@ -2,7 +2,7 @@
 
 /*
 |--------------------------------------------------------------------------
-| Front End
+| Frontend routes
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
@@ -11,12 +11,14 @@
 |
 */
 
-Route::get('/', 'FrontendController@index');
+Route::namespace('Front')->group(function () {
+    Route::get('/', 'FrontendController@index');
+});
 
 
 /*
 |--------------------------------------------------------------------------
-| Back End
+| Backend routes
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
@@ -25,6 +27,8 @@ Route::get('/', 'FrontendController@index');
 |
 */
 
-Auth::routes();
+Route::namespace('Back')->group(function () {
+    Auth::routes();
 
-Route::get('/home', 'BackendController@index');
+    Route::get('/home', 'BackendController@index');
+});

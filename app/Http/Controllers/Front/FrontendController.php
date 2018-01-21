@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Front;
 
 use App\Album;
 use App\Camera;
+use App\Http\Controllers\Controller;
 
 class FrontendController extends Controller
 {
