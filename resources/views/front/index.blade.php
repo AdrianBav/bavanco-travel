@@ -19,6 +19,7 @@
 
         <div id="wrapper">
 
+            <!-- Header -->
             <header id="header">
                 <h1><a href="/"><strong>Bavanco</strong> : {{ config('app.name') }}</a></h1>
                 <nav>
@@ -48,14 +49,18 @@
                 @endforeach
             </div>
 
+            <!-- Footer -->
             <footer id="footer" class="panel">
                 <div class="inner split">
                     <div>
                         <section>
-                            <h2>Welcome to the Bavanco Travel Gallery</h2>
+                            <h2>Welcome to {{ config('app.name') }}</h2>
                             <p>
-                                I met Jillian in 2008 when she first visited London. A few months later I returned the favour and visited Dallas. After a couple of years I moved to Texas as we got married.<br>
-                                Since then we have traveled together, documenting our adventures with our photography. This gallery contains some of my favourite photographs from across, what is now, <?php echo count($albums); ?> destinations.
+                                I met Jillian in 2008 when she first visited London. A few months later I returned the favour and visited Dallas.
+                                After a couple of years I moved to Texas as we got married.
+                                <br>
+                                Since then we have traveled together, documenting our adventures with our photography.
+                                This gallery contains some of my favourite photographs from across, what is now, {{ count($albums) }} destinations.
                             </p>
                         </section>
                         <section>
@@ -70,9 +75,9 @@
                         <section id="camera-credits">
                             <h2>Camera Credits</h2>
                             <ul>
-                            @foreach ($cameras as $camera)
+                                @foreach ($cameras as $camera)
                                 <li><strong>{{ $camera->ref }}:</strong> {{ $camera->fullname }}</li>
-                            @endforeach
+                                @endforeach
                             </ul>
                         </section>
                     </div>
