@@ -20,6 +20,14 @@ class Photograph extends Model
      */
     public $timestamps = false;
 
+    /**
+     * The relations to eager load on every query.
+     * Note: Required for the 'path' accessor.
+     *
+     * @var  string
+     */
+    protected $with = 'album';
+
 
     // Eloquent Relationships
 
