@@ -413,12 +413,12 @@ var skel = (function() { "use strict"; var _ = {
 				_.stateId = newStateId;
 				_.breakpointIds = (_.stateId === _.sd ? [] : _.stateId.substring(1).split(_.sd));
 
-				console.log('[skel] changing states (id: "' + _.stateId + '")');
+				// console.log('[skel] changing states (id: "' + _.stateId + '")');
 
 			// Get state.
 				if (!_.obj.states[_.stateId]) {
 
-					console.log('[skel] - not found. building ...');
+					// console.log('[skel] - not found. building ...');
 
 					// Build state.
 						_.obj.states[_.stateId] = {
@@ -433,7 +433,7 @@ var skel = (function() { "use strict"; var _ = {
 				}
 				else {
 
-					console.log('[skel] - found');
+					// console.log('[skel] - found');
 
 					// Get state.
 						_.state = _.obj.states[_.stateId];
@@ -579,7 +579,7 @@ var skel = (function() { "use strict"; var _ = {
 					if (attachment.permanent)
 						_._attach = e;
 
-			console.log('[skel] ' + attachment.id + ': attached (' + attachment.priority + ')');
+			// console.log('[skel] ' + attachment.id + ': attached (' + attachment.priority + ')');
 
 			return true;
 
@@ -707,7 +707,7 @@ var skel = (function() { "use strict"; var _ = {
 			// Trigger init event.
 				_.trigger('init');
 
-			console.log('[skel] initialized.');
+			// console.log('[skel] initialized.');
 
 		},
 

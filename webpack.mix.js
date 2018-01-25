@@ -22,13 +22,14 @@ mix.sass('resources/assets/sass/front/src/main.scss', 'public/css/front.css').op
 
 // Scripts
 mix.copy('resources/assets/js/front/main.js', 'public/js/front.js')
+    .copy('resources/assets/js/front/ie/html5shiv.js', 'public/js/ie/html5shiv.js')
+    .copy('resources/assets/js/front/ie/respond.js', 'public/js/ie/respond.js')
     .scripts([
         'resources/assets/js/front/vendor/jquery-1.11.3.js',
         'resources/assets/js/front/vendor/jquery.poptrox.js',
         'resources/assets/js/front/vendor/skel.js',
         'resources/assets/js/front/vendor/util.js'
-    ], 'public/js/vendor.js')
-    .copyDirectory('resources/assets/js/front/ie', 'public/js/ie');
+    ], 'public/js/vendor.js');
 
 
 /*
