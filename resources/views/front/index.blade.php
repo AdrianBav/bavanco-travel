@@ -21,7 +21,9 @@
 
             <!-- Header -->
             <header id="header">
-                <h1><a href="/"><strong>Bavanco</strong> : {{ config('app.name') }}</a></h1>
+                <h1>
+                    <a href="/"><strong>{{ config('app.name') }}</strong></a>
+                </h1>
                 <nav>
                     <ul>
                         <li><a href="#footer" class="icon fa-info-circle">About</a></li>
