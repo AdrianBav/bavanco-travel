@@ -19,6 +19,7 @@ class CreateCamerasTable extends Migration
             $table->string('manufacturer');
             $table->string('model');
             $table->string('image');
+            $table->string('description');
 
             $table->string('ref');
 

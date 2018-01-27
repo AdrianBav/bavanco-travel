@@ -7,6 +7,16 @@
 /* Footer */
 
 	#footer {
+
+        ul.split-list {
+            column-count: 2;
+            column-gap: 50px;
+
+            li {
+                break-inside: avoid;
+            }
+        }
+
 		.copyright {
 			color: _palette(fg-light);
 			font-size: 0.9em;

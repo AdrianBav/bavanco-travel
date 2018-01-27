@@ -22,7 +22,7 @@
             <!-- Header -->
             <header id="header">
                 <h1>
-                    <a href="/"><strong>{{ config('app.name') }}</strong></a>
+                    <a href="{{ route('home') }}"><strong>{{ config('app.name') }}</strong></a>
                 </h1>
                 <nav>
                     <ul>
@@ -75,10 +75,12 @@
                     </div>
                     <div>
                         <section id="camera-credits">
-                            <h2>Camera Credits</h2>
+                            <h2>Camera Credits <a href="{{ route('cameras') }}" class="link">more...</a></h2>
                             <ul>
                                 @foreach ($cameras as $camera)
-                                <li><strong>{{ $camera->ref }}:</strong> {{ $camera->fullname }}</li>
+                                <li>
+                                    <strong>{{ $camera->ref }}:</strong> {{ $camera->fullname }} <em>({{ $camera->photographs_count }} photos)</em>
+                                </li>
                                 @endforeach
                             </ul>
                         </section>
@@ -91,7 +93,7 @@
         <!-- Scripts -->
         <script src="{{ asset('js/vendor.js') }}"></script>
         <!--[if lte IE 8]><script src="{{ asset('js/ie/respond.min.js') }}"></script><![endif]-->
-        <script src="{{ asset('js/front.js') }}"></script>
+        <script src="{{ asset('js/main-gallery.js') }}"></script>
 
     </body>
 </html>

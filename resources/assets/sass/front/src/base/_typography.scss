@@ -34,6 +34,12 @@
 		}
 	}
 
+	.link {
+	    color: _palette(accent1);
+	    font-size: 20px;
+	    text-transform: none;
+	}
+
 	strong, b {
 		color: _palette(fg-bold);
 		font-weight: _font(weight-bold);

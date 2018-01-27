@@ -21,7 +21,8 @@ mix.sass('resources/assets/sass/front/src/main.scss', 'public/css/front.css').op
     .copyDirectory('resources/assets/sass/front/src/images', 'public/css/images');
 
 // Scripts
-mix.copy('resources/assets/js/front/main.js', 'public/js/front.js')
+mix.copy('resources/assets/js/front/main-gallery.js', 'public/js/main-gallery.js')
+    .copy('resources/assets/js/front/camera-gallery.js', 'public/js/camera-gallery.js')
     .copy('resources/assets/js/front/ie/html5shiv.js', 'public/js/ie/html5shiv.js')
     .copy('resources/assets/js/front/ie/respond.js', 'public/js/ie/respond.js')
     .scripts([

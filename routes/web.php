@@ -12,7 +12,8 @@
 */
 
 Route::namespace('Front')->group(function () {
-    Route::get('/', 'PagesController@index');
+    Route::get('/', 'PagesController@index')->name('home');
+    Route::get('/cameras', 'PagesController@cameras')->name('cameras');
 });
 
 
