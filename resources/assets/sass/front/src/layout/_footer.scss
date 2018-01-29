@@ -17,6 +17,18 @@
             }
         }
 
+    // Medium.
+        @include breakpoint(medium) {
+            ul.split-list {
+                column-count: 1;
+                column-gap: normal;
+
+                li {
+                    break-inside: auto;
+                }
+            }
+        }
+
 		.copyright {
 			color: _palette(fg-light);
 			font-size: 0.9em;
