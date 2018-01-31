@@ -123,6 +123,16 @@ class DallisterSeeder extends Seeder
             'caption'  => 'M-Line Trolley',
         ],
         [
+            'filename' => 'adrian_uptown.jpg',
+            'caption'  => 'Adrian',
+            'camera'   => 'Lomo LC-A+',
+        ],
+        [
+            'filename' => 'house.jpg',
+            'caption'  => 'Abandoned house, Uptown',
+            'camera'   => 'Lomo LC-A+',
+        ],
+        [
             'filename' => 'texas_star.jpg',
             'caption'  => 'Texas Star',
         ],
@@ -253,6 +263,11 @@ class DallisterSeeder extends Seeder
         ],
         // Outside the metroplex
         [
+            'filename' => 'courthouse.jpg',
+            'caption'  => 'Parker County courthouse, Weatherford Texas',
+            'camera'   => 'Lomo LC-A+',
+        ],
+        [
             'filename' => 'adrian_in_weatherford.jpg',
             'caption'  => 'Downtown Weatherford',
         ],
@@ -265,8 +280,18 @@ class DallisterSeeder extends Seeder
             'caption'  => 'Hiking at Possum Kingdom',
         ],
         [
+            'filename' => 'cactus.jpg',
+            'caption'  => 'Prickly Pear Cactus, Possum Kingdom Lake',
+            'camera'   => 'Lomo LC-A+',
+        ],
+        [
             'filename' => 'sam_houston_statue.jpg',
             'caption'  => 'Sam Houston Statue',
+        ],
+        [
+            'filename' => 'cows.jpg',
+            'caption'  => 'Cows',
+            'camera'   => 'Lomo LC-A+',
         ],
         // Day Trip to Fort Worth
         [
@@ -288,6 +313,11 @@ class DallisterSeeder extends Seeder
         [
             'filename' => 'mudcracks.jpg',
             'caption'  => 'Mudcracks',
+        ],
+        [
+            'filename' => 'botanic_garden.jpg',
+            'caption'  => 'Fort Worth Botanic Garden',
+            'camera'   => 'Lomo LC-A+',
         ],
         [
             'filename' => 'water_gardens.jpg',

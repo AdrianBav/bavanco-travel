@@ -77,6 +77,11 @@ class Spain2010Seeder extends Seeder
             'caption'  => 'Pedraza',
         ],
         [
+            'filename' => 'vespa.jpg',
+            'caption'  => 'Jillian\'s Vespa',
+            'camera'   => 'Fisheye One',
+        ],
+        [
             'filename' => 'sepulveda.jpg',
             'caption'  => 'Sepúlveda',
         ],
@@ -119,6 +124,11 @@ class Spain2010Seeder extends Seeder
         [
             'filename' => 'cara_los_carteles.jpg',
             'caption'  => 'CARA LOS CARTELES',
+        ],
+        [
+            'filename' => 'palace-hotel.jpg',
+            'caption'  => 'Palace Hotel, Madrid',
+            'camera'   => 'Fisheye One',
         ],
         [
             'filename' => 'plaza_mayor.jpg',
