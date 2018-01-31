@@ -63,6 +63,13 @@ class CamerasTableSeeder extends Seeder
                 'description'    => 'Adrian\'s first Lomography camera.',
                 'ref'            => 'Fish1',
             ],
+            [
+                'manufacturer'   => 'Pentax',
+                'model'          => 'MX',
+                'image'          => 'pentax-mx.jpg',
+                'description'    => 'Adrian\'s second-hand SLR film camera.',
+                'ref'            => 'MX',
+            ],
         ]);
 
         $pointAndShootCamera->cameras()->createMany([

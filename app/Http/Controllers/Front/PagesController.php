@@ -16,8 +16,14 @@ class PagesController extends Controller
      */
     public function index()
     {
-        $albums = Album::with('photographs.camera')->orderBy('travel_date', 'desc')->get();
-        $cameras = Camera::withCount('photographs')->orderBy('photographs_count', 'desc')->get();
+        $albums = Album::with('photographs.camera')
+            ->orderBy('travel_date', 'desc')
+            ->get();
+
+        $cameras = Camera::withCount('photographs')
+            ->orderBy('photographs_count', 'desc')
+            ->orderBy('id')
+            ->get();
 
         return view('front.index', compact('albums', 'cameras'));
     }
