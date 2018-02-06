@@ -45,8 +45,8 @@ class USVirginIslands2014Seeder extends Seeder
             'caption'  => 'Green Iguana',
         ],
         [
-            'filename' => 'palm_tree_leafs.jpg',
-            'caption'  => 'Palm Tree Leafs',
+            'filename' => 'palm_tree_leaves.jpg',
+            'caption'  => 'Palm Tree Leaves',
         ],
         [
             'filename' => 'the_caribbean.jpg',
@@ -107,7 +107,7 @@ class USVirginIslands2014Seeder extends Seeder
         ],
         [
             'filename' => 'hair.jpg',
-            'caption'  => 'Colorfull Hair',
+            'caption'  => 'Colorful Hair',
         ],
         [
             'filename' => 'palm_tree_trunk.jpg',

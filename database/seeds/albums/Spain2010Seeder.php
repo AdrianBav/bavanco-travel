@@ -30,7 +30,7 @@ class Spain2010Seeder extends Seeder
         ],
         [
             'filename' => 'el_desvan.jpg',
-            'caption'  => 'View from the &#39;El Desvan&#39; Cafe, Segovia',
+            'caption'  => 'View from the &quot;El Desvan&quot; Cafe, Segovia',
         ],
         [
             'filename' => 'shops.jpg',

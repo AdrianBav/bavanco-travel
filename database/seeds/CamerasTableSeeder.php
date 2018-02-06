@@ -101,14 +101,14 @@ class CamerasTableSeeder extends Seeder
                 'manufacturer'   => 'Samsung',
                 'model'          => 'Galaxy S7',
                 'image'          => 'samsung-galaxy-s7.jpg',
-                'description'    => 'Jillian\'s second smart phone.',
+                'description'    => 'Jillian\'s current smart phone.',
                 'ref'            => 'S7',
             ],
             [
                 'manufacturer'   => 'Samsung',
                 'model'          => 'Galaxy Alpha',
                 'image'          => 'samsung-galaxy-alpha.jpg',
-                'description'    => 'Jillian\'s first smart phone.',
+                'description'    => 'Jillian\'s last smart phone.',
                 'ref'            => 'Alpha',
             ],
             [

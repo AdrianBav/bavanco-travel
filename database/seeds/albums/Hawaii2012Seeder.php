@@ -52,7 +52,7 @@ class Hawaii2012Seeder extends Seeder
         ],
         [
             'filename' => 'jillian_and_adrian.jpg',
-            'caption'  => 'Jillian and Adrian',
+            'caption'  => 'Jillian and Adrian &quot;Hang Loose&quot;',
             'camera'   => 'Lomo LC-A+',
         ],
         [
@@ -61,7 +61,7 @@ class Hawaii2012Seeder extends Seeder
         ],
         [
             'filename' => 'moana_surfrider_waikiki_view_blinds.jpg',
-            'caption'  => 'View of Waikīkī beach through the blinds from The Moana Surfrider Hotel',
+            'caption'  => 'View of Waikīkī beach from The Moana Surfrider Hotel',
         ],
         [
             'filename' => 'moana_surfrider.jpg',
@@ -106,11 +106,11 @@ class Hawaii2012Seeder extends Seeder
         ],
         [
             'filename' => 'bird.jpg',
-            'caption'  => 'Bird',
+            'caption'  => 'White-rumped shama',
         ],
         [
             'filename' => 'lizard.jpg',
-            'caption'  => 'Lizard',
+            'caption'  => 'Monitor Lizard',
         ],
         [
             'filename' => 'hanauma_bay.jpg',

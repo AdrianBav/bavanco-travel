@@ -83,7 +83,7 @@ class DallisterSeeder extends Seeder
         ],
         [
             'filename' => 'kennedy_memorial.jpg',
-            'caption'  => 'John Fitzgerald Kennedy Memorial',
+            'caption'  => 'John F. Kennedy Memorial',
         ],
         [
             'filename' => 'old_red_museum.jpg',
