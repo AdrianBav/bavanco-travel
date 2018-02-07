@@ -115,10 +115,6 @@ class DallisterSeeder extends Seeder
             'caption'  => 'Hand Collection At Baylor Medical Center',
         ],
         [
-            'filename' => 'jillian_trolly_station.jpg',
-            'caption'  => 'Waiting for the Trolley',
-        ],
-        [
             'filename' => 'jillian_on_trolly.jpg',
             'caption'  => 'M-Line Trolley',
         ],
