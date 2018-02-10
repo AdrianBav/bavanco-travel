@@ -12,6 +12,7 @@ This website showcases our favourite photographs from our travels.
 
 Steps to deploy this site:
 
+
 ### Git
 Clone the **bavanco-travel** repository into a new directory.
 
@@ -54,10 +55,16 @@ The next thing you should do is set your **application key** to a random string.
     php artisan key:generate
 
 
-### Configuration Caching
-To give your application a speed boost, you should cache all of your configuration files into a single file using the **config:cache** Artisan command. This will combine all of the configuration options for your application into a single file which will be loaded quickly by the framework.
+### Optimizing Configuration Loading
+When deploying your application to production, you should make sure that you run the **config:cache** Artisan command during your deployment process:
 
     php artisan config:cache
+
+
+### Optimizing Route Loading
+If you are building a large application with many routes, you should make sure that you are running the **route:cache** Artisan command during your deployment process:
+
+    php artisan route:cache
 
 
 ### Database
@@ -77,6 +84,7 @@ You may use the **db:seed** Artisan command to seed your database. By default, t
 
     php artisan db:seed
     php artisan db:seed --class=UsersTableSeeder
+
 
 ### Compiling Assets
 Before triggering Mix, you must first ensure that Node.js and NPM are installed on your machine.
