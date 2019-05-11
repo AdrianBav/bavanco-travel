@@ -1,5 +1,7 @@
 <?php
 
+use AdrianBav\Traffic\Middlewares\RecordVisits;
+
 /*
 |--------------------------------------------------------------------------
 | Frontend routes
@@ -12,7 +14,7 @@
 */
 
 Route::namespace('Front')->group(function () {
-    Route::get('/', 'PagesController@index')->name('home');
+    Route::get('/', 'PagesController@index')->middleware(RecordVisits::class)->name('home');
     Route::get('/cameras', 'PagesController@cameras')->name('cameras');
 });
 
