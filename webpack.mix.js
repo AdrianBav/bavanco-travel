@@ -1,4 +1,4 @@
-let mix = require('laravel-mix');
+const mix = require('laravel-mix');
 
 /*
  |--------------------------------------------------------------------------
@@ -12,24 +12,24 @@ let mix = require('laravel-mix');
  */
 
 // Styles
-mix.sass('resources/assets/sass/front/src/main.scss', 'public/css/front.css').options({
+mix.sass('resources/sass/front/src/main.scss', 'public/css/front.css').options({
         processCssUrls: false
     })
-    .sass('resources/assets/sass/front/src/ie8.scss', 'public/css/ie')
-    .sass('resources/assets/sass/front/src/ie9.scss', 'public/css/ie')
-    .copyDirectory('resources/assets/sass/front/fonts', 'public/fonts')
-    .copyDirectory('resources/assets/sass/front/src/images', 'public/css/images');
+    .sass('resources/sass/front/src/ie8.scss', 'public/css/ie')
+    .sass('resources/sass/front/src/ie9.scss', 'public/css/ie')
+    .copyDirectory('resources/sass/front/fonts', 'public/fonts')
+    .copyDirectory('resources/sass/front/src/images', 'public/css/images');
 
 // Scripts
-mix.copy('resources/assets/js/front/main-gallery.js', 'public/js/main-gallery.js')
-    .copy('resources/assets/js/front/camera-gallery.js', 'public/js/camera-gallery.js')
-    .copy('resources/assets/js/front/ie/html5shiv.js', 'public/js/ie/html5shiv.js')
-    .copy('resources/assets/js/front/ie/respond.js', 'public/js/ie/respond.js')
+mix.copy('resources/js/front/main-gallery.js', 'public/js/main-gallery.js')
+    .copy('resources/js/front/camera-gallery.js', 'public/js/camera-gallery.js')
+    .copy('resources/js/front/ie/html5shiv.js', 'public/js/ie/html5shiv.js')
+    .copy('resources/js/front/ie/respond.js', 'public/js/ie/respond.js')
     .scripts([
-        'resources/assets/js/front/vendor/jquery-1.11.3.js',
-        'resources/assets/js/front/vendor/jquery.poptrox.js',
-        'resources/assets/js/front/vendor/skel.js',
-        'resources/assets/js/front/vendor/util.js'
+        'resources/js/front/vendor/jquery-1.11.3.js',
+        'resources/js/front/vendor/jquery.poptrox.js',
+        'resources/js/front/vendor/skel.js',
+        'resources/js/front/vendor/util.js'
     ], 'public/js/vendor.js');
 
 
@@ -44,5 +44,5 @@ mix.copy('resources/assets/js/front/main-gallery.js', 'public/js/main-gallery.js
  |
  */
 
-mix.js('resources/assets/js/back/app.js', 'public/js/back.js')
-   .sass('resources/assets/sass/back/app.scss', 'public/css/back.css');
+mix.js('resources/js/back/app.js', 'public/js/back.js')
+   .sass('resources/sass/back/app.scss', 'public/css/back.css');
