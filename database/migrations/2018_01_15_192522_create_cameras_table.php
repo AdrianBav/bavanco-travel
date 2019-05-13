@@ -14,7 +14,7 @@ class CreateCamerasTable extends Migration
     public function up()
     {
         Schema::create('cameras', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
 
             $table->string('manufacturer');
             $table->string('model');
@@ -23,12 +23,12 @@ class CreateCamerasTable extends Migration
 
             $table->string('ref');
 
-            $table->integer('camera_type_id')->unsigned();
+            $table->unsignedBigInteger('camera_type_id');
         });
 
         // Camera Types
         Schema::create('camera_types', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->string('name');
         });
     }

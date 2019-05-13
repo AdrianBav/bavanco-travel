@@ -45,4 +45,4 @@ mix.copy('resources/js/front/main-gallery.js', 'public/js/main-gallery.js')
  */
 
 mix.js('resources/js/back/app.js', 'public/js/back.js')
-   .sass('resources/sass/back/app.scss', 'public/css/back.css');
+    .sass('resources/sass/back/app.scss', 'public/css/back.css');
