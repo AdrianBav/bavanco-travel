@@ -4,8 +4,66 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "96cb3a09cff26288393f2fa6164a7f1e",
+    "content-hash": "e88b5e6947b6519af9881ed16c804c7e",
     "packages": [
+        {
+            "name": "adrianbav/traffic",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/AdrianBav/traffic.git",
+                "reference": "61eaef1f073aa306e865bb33ff21a582f3d2899b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/AdrianBav/traffic/zipball/61eaef1f073aa306e865bb33ff21a582f3d2899b",
+                "reference": "61eaef1f073aa306e865bb33ff21a582f3d2899b",
+                "shasum": ""
+            },
+            "require": {
+                "jaybizzle/crawler-detect": "1.*"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^3.5",
+                "phpunit/phpunit": "^7.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "AdrianBav\\Traffic\\TrafficServiceProvider"
+                    ],
+                    "aliases": {
+                        "Traffic": "AdrianBav\\Traffic\\Facades\\Traffic"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "AdrianBav\\Traffic\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "AdrianBav\\Traffic\\Tests\\": "tests"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adrian Bavister",
+                    "email": "adrian@bavanco.co.uk"
+                }
+            ],
+            "description": "Capture website traffic.",
+            "support": {
+                "source": "https://github.com/AdrianBav/traffic/tree/master",
+                "issues": "https://github.com/AdrianBav/traffic/issues"
+            },
+            "time": "2019-05-13T19:49:10+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
@@ -458,6 +516,55 @@
             ],
             "description": "Highlight PHP code in terminal",
             "time": "2018-09-29T18:48:56+00:00"
+        },
+        {
+            "name": "jaybizzle/crawler-detect",
+            "version": "v1.2.81",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JayBizzle/Crawler-Detect.git",
+                "reference": "ffb1880f8e9610569d3bc70dc90bf07db311471d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JayBizzle/Crawler-Detect/zipball/ffb1880f8e9610569d3bc70dc90bf07db311471d",
+                "reference": "ffb1880f8e9610569d3bc70dc90bf07db311471d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8|^5.5|^6.5",
+                "satooshi/php-coveralls": "1.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Jaybizzle\\CrawlerDetect\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Beech",
+                    "email": "m@rkbee.ch",
+                    "role": "Developer"
+                }
+            ],
+            "description": "CrawlerDetect is a PHP class for detecting bots/crawlers/spiders via the user agent",
+            "homepage": "https://github.com/JayBizzle/Crawler-Detect/",
+            "keywords": [
+                "crawler",
+                "crawler detect",
+                "crawler detector",
+                "crawlerdetect",
+                "php crawler detect"
+            ],
+            "time": "2019-04-23T20:02:21+00:00"
         },
         {
             "name": "laravel/framework",
@@ -3029,16 +3136,16 @@
         },
         {
             "name": "nunomaduro/collision",
-            "version": "v2.1.1",
+            "version": "v3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nunomaduro/collision.git",
-                "reference": "b5feb0c0d92978ec7169232ce5d70d6da6b29f63"
+                "reference": "af42d339fe2742295a54f6fdd42aaa6f8c4aca68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nunomaduro/collision/zipball/b5feb0c0d92978ec7169232ce5d70d6da6b29f63",
-                "reference": "b5feb0c0d92978ec7169232ce5d70d6da6b29f63",
+                "url": "https://api.github.com/repos/nunomaduro/collision/zipball/af42d339fe2742295a54f6fdd42aaa6f8c4aca68",
+                "reference": "af42d339fe2742295a54f6fdd42aaa6f8c4aca68",
                 "shasum": ""
             },
             "require": {
@@ -3048,10 +3155,10 @@
                 "symfony/console": "~2.8|~3.3|~4.0"
             },
             "require-dev": {
-                "laravel/framework": "5.7.*",
+                "laravel/framework": "5.8.*",
                 "nunomaduro/larastan": "^0.3.0",
-                "phpstan/phpstan": "^0.10",
-                "phpunit/phpunit": "~7.3"
+                "phpstan/phpstan": "^0.11",
+                "phpunit/phpunit": "~8.0"
             },
             "type": "library",
             "extra": {
@@ -3089,7 +3196,7 @@
                 "php",
                 "symfony"
             ],
-            "time": "2018-11-21T21:40:54+00:00"
+            "time": "2019-03-07T21:35:13+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -4404,7 +4511,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "adrianbav/traffic": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
