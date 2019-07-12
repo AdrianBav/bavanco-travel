@@ -9,6 +9,7 @@
         <title>{{ config('app.name') }} | Bavanco</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="theme-color" content="#337024">
         <!--[if lte IE 8]><script src="{{ asset('js/ie/html5shiv.js') }}"></script><![endif]-->
         <link rel="stylesheet" href="{{ asset('css/front.css') }}" />
         <!--[if lte IE 9]><link rel="stylesheet" href="{{ asset('css/ie/ie9.css') }}" /><![endif]-->
