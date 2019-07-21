@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
-
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -13,8 +11,12 @@ use Illuminate\Http\Request;
 |
 */
 
-// Note: Can't cache routes when using closues
-//
-// Route::middleware('auth:api')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
+Route::middleware('auth:api')->get('/meta', function () {
+    return [
+        'item1' => '%d destinations',
+        'number1' => 10,
+        'item2' => '%d photographs',
+        'number2' => 351,
+        'info' => 'Various cameras',
+    ];
+});
