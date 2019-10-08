@@ -1,5 +1,8 @@
 <?php
 
+use App\Album;
+use App\Photograph;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -14,9 +17,9 @@
 Route::middleware('auth:api')->get('/meta', function () {
     return [
         'item1' => '%d destinations',
-        'number1' => 10,
+        'number1' => Album::count(),
         'item2' => '%d photographs',
-        'number2' => 351,
+        'number2' => Photograph::count(),
         'info' => 'Various cameras',
     ];
 });
